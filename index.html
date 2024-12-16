@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Font Preloading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timur Mamadaliyev Portfolio</title>
-    <link rel="stylesheet" href="custom.css">
+    
     <style>
-        /* Two-side layout */
+        /* General Page Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Exo 2', sans-serif; /* Custom font */
+            color: #fff;
+            background-image: url('background.jpg'); /* Background for the whole body */
+            background-size: cover;
+            background-attachment: fixed; /* Keeps background static */
+        }
+
         .container {
             display: flex;
             height: 100vh; /* Full screen height */
         }
 
+        /* Left Side Styling */
         .left-side {
             flex: 1;
-            background: rgba(0, 0, 0, 0.7); /* Transparent dark background for text */
+            background: rgba(0, 0, 0, 0.7); /* Transparent dark background */
             padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Contact info to bottom */
             text-align: center;
         }
 
-        .right-side {
-            flex: 2;
-            padding: 40px;
-            overflow-y: auto; /* Scrollable if content overflows */
-            background: rgba(255, 255, 255, 0.9); /* Light background for readability */
-            color: #333;
-        }
-
         img.profile {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* Makes the image perfectly circular */
+            margin: 20px auto;
+            border: 4px solid #0fa0ce; /* Blue border for style */
         }
 
         h1 {
             font-size: 2.5em;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
 
-        h2 {
-            margin-bottom: 20px;
+        .welcome-text {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin: 20px 0;
         }
 
-        a {
+        .contact {
+            font-size: 0.9em;
+            margin-top: auto; /* Push to the bottom */
+        }
+
+        .contact a {
             color: #0fa0ce;
             text-decoration: none;
         }
 
-        a:hover {
+        .contact a:hover {
             text-decoration: underline;
+        }
+
+        /* Right Side Styling */
+        .right-side {
+            flex: 2;
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         ul.projects {
@@ -60,52 +91,67 @@
         }
 
         li.project-item {
-            margin-bottom: 15px;
-            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
             padding-bottom: 10px;
+        }
+
+        li.project-item h3 {
+            margin: 0;
+        }
+
+        li.project-item a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        li.project-item a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Left Side: Photo, Welcome Text, Contact Info -->
+        <!-- Left Side -->
         <div class="left-side">
-            <img src="CV_photo.jpg" alt="Timur Mamadaliyev" class="profile">
-            <h1>Welcome!</h1>
-            <p>Hi, I'm Timur Mamadaliyev, a passionate Data Scientist and Machine Learning enthusiast.</p>
-            <h2>Contact</h2>
-            <p>
-                GitHub: <a href="https://github.com/TimurMMD">TimurMMD</a><br>
-                Email: <a href="mailto:mamadaliyevtv@gmail.com">mamadaliyevtv@gmail.com</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/timur-mamadaliyev-52b9932b1/">LinkedIn</a>
-
-            </p>
+            <div>
+                <img src="CV_photo.jpg" alt="Timur Mamadaliyev" class="profile">
+                <h1>Welcome!</h1>
+                <p class="welcome-text">Hi, I'm Timur Mamadaliyev, a passionate Data Scientist and Machine Learning enthusiast.</p>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>
+                    GitHub: <a href="https://github.com/TimurMMD" target="_blank">TimurMMD</a><br>
+                    Email: <a href="mailto:mamadaliyevtv@gmail.com">mamadaliyevtv@gmail.com</a><br>
+                    LinkedIn: <a href="https://www.linkedin.com/in/timur-mamadaliyev-52b9932b1/" target="_blank">LinkedIn</a>
+                </p>
+            </div>
         </div>
 
-        <!-- Right Side: Projects -->
+        <!-- Right Side -->
         <div class="right-side">
             <h2>My Projects</h2>
             <ul class="projects">
                 <li class="project-item">
-                    <h3>Project 1: Investment Helper(Stock Return Prediction)</h3>
-                    <p>href="https://github.com/TimurMMD/Dissertation_Thesis">Dissertation: Investment Helper</p>
+                    <h3><a href="https://github.com/TimurMMD/Dissertation_Thesis" target="_blank">Investment Helper (Stock Return Prediction)</a></h3>
+                    <p>Dissertation project predicting stock returns for long-term investments.</p>
                 </li>
                 <li class="project-item">
-                    <h3>Project 2: Dashboardfor Invetment Helper</h3>
-                    <p> href="https://github.com/TimurMMD/dashboard">Stock Prediction Dashboard</p>
+                    <h3><a href="https://github.com/TimurMMD/dashboard" target="_blank">Dashboard for Investment Helper</a></h3>
+                    <p>Interactive dashboard visualizing predictions and insights.</p>
                 </li>
                 <li class="project-item">
-                    <h3>Project 3: Big Data Analytics</h3>
-                    <p>href="https://github.com/TimurMMD/Big-Data-UEL-project">Big Data Analytics</p>
+                    <h3><a href="https://github.com/TimurMMD/Big-Data-UEL-project" target="_blank">Big Data Analytics</a></h3>
+                    <p>Analyses large-scale financial datasets using big data tools.</p>
                 </li>
-                 <li class="project-item">
-                    <h3>Project 4: Neural Networks</h3>
-                    <p>href="https://github.com/TimurMMD/NN_Projects">Neural Network Implementations</p>
+                <li class="project-item">
+                    <h3><a href="https://github.com/TimurMMD/NN_Projects" target="_blank">Neural Networks Implementations</a></h3>
+                    <p>Developed neural network models for various machine learning tasks.</p>
                 </li>
             </ul>
         </div>
     </div>
 </body>
-</html>
-
 </html>
