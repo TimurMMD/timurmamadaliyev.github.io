@@ -1,5 +1,4 @@
-title: "Cayman"
-description: "Cayman is a clean, responsive theme for GitHub Pages."
-show_downloads: true
-google_analytics: # Add your Google Analytics ID here, or leave it blank
+title: "Timur Mamadaliyev Portfolio"
+description: "Explore my projects, achievements, and portfolio."
 theme: jekyll-theme-cayman
+show_downloads: true
