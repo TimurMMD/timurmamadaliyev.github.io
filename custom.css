@@ -1,9 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px auto;
-    max-width: 800px;
-    line-height: 1.6;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* We'll change this to a fancy font later */
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Keeps the image static */
+    color: #fff; /* White text for readability */
 }
 
 img {
