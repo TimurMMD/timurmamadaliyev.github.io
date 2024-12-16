@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif; /* We'll change this to a fancy font later */
+    font-family: 'Exo 2', sans-serif; /* We'll change this to a fancy font later */
     background-image: url('background.jpg');
     background-size: cover;
     background-attachment: fixed; /* Keeps the image static */
